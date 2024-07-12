@@ -12,10 +12,12 @@ public class MainView extends BaseFrame {
     private JPanel toolsPanel;
     private JButton crackButton;
     private JTextField secondsAmtInput;
-    private JButton settingsButton;
+    private JButton languageButton;
     private JTextField circlesAmtInput;
     private JProgressBar progressBar1;
     private JButton button1;
+    private JButton presetsButton;
+    private JComboBox presetsCombobox;
 
     public MainView() {
         setLookAndFeel(WINDOWS);

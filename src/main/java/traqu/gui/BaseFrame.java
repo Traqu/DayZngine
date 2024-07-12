@@ -4,9 +4,12 @@ import traqu.constant.LookAndFeel;
 
 import javax.swing.*;
 
+import static traqu.constant.Constants.APPLICATION_TITLE;
+
 public abstract class BaseFrame extends JFrame implements LookAndFeel {
 
     public BaseFrame() {
+        setTitle(APPLICATION_TITLE);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
     }

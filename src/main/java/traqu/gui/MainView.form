@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="traqu.gui.MainView">
   <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="692" height="400"/>
+      <xy x="20" y="20" width="701" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -28,7 +28,7 @@
           </vspacer>
         </children>
       </grid>
-      <grid id="ef7b5" binding="settingsPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="ef7b5" binding="settingsPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints border-constraint="East"/>
         <properties/>
@@ -36,20 +36,30 @@
         <children>
           <vspacer id="24d5a">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
             </constraints>
           </vspacer>
-          <component id="565de" class="javax.swing.JButton" binding="settingsButton">
+          <component id="565de" class="javax.swing.JButton" binding="languageButton">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text resource-bundle="localization" key="settings"/>
+              <text resource-bundle="localization" key="languageButton"/>
+            </properties>
+          </component>
+          <component id="e7fa8" class="javax.swing.JButton" binding="presetsButton">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text resource-bundle="localization" key="presetsButton"/>
             </properties>
           </component>
         </children>
       </grid>
       <grid id="2ac82" binding="toolsPanel" layout-manager="FormLayout">
+        <rowspec value="center:max(d;4px):noGrow"/>
+        <rowspec value="top:4dlu:noGrow"/>
         <rowspec value="center:max(d;4px):noGrow"/>
         <rowspec value="top:4dlu:noGrow"/>
         <rowspec value="center:max(d;4px):noGrow"/>
@@ -123,6 +133,15 @@
             <properties>
               <labelFor value="17dfa"/>
               <text resource-bundle="localization" key="secondsAmtHint"/>
+            </properties>
+          </component>
+          <component id="8c12d" class="javax.swing.JComboBox" binding="presetsCombobox">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <toolTipText resource-bundle="localization" key="settings"/>
             </properties>
           </component>
         </children>
