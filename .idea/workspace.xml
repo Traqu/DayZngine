@@ -9,23 +9,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/java/lang/annotations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/java/util/annotations.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/MainView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/language/LanguageManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/language.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/language_de.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/language_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/language_pl.properties" afterDir="false" />
+    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Base languagecore">
+      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/constant/LookAndFeel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/gui/BaseFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/gui/MainView.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/gui/MainView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/localization.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/localization_de.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/localization_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/localization_pl.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/DayZMacro_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/DayZMacro_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/MainView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainView.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/MainView.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/MainView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/utils/process/ProcessSupervisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/utils/process/ProcessSupervisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/language.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/language_de.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/language_en.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/language_pl.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +39,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -62,43 +67,57 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [site].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RESOURCE_BUNDLE_EXPRESSION_USED&quot;: &quot;resourceBundle&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/piotr/IdeaProjects/DayZMacro&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Application.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Maven.DayZMacro [clean,install].executor": "Run",
+    "Maven.DayZMacro [clean,package].executor": "Run",
+    "Maven.DayZMacro [clean].executor": "Run",
+    "Maven.DayZMacro [compile].executor": "Run",
+    "Maven.DayZMacro [install].executor": "Run",
+    "Maven.DayZMacro [org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy].executor": "Run",
+    "Maven.DayZMacro [org.apache.maven.plugins:maven-jar-plugin:3.2.0:jar].executor": "Run",
+    "Maven.DayZMacro [package].executor": "Run",
+    "Maven.DayZMacro [site].executor": "Run",
+    "Maven.DayZMacro [test].executor": "Run",
+    "Maven.DayZMacro [validate].executor": "Run",
+    "Maven.DayZMacro [verify].executor": "Run",
+    "RESOURCE_BUNDLE_EXPRESSION_USED": "resourceBundle",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/piotr/IdeaProjects/DayZMacro/src/main/java/traqu/gui/MainView.form",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "two.files.diff.last.used.file": "C:/Users/piotr/IdeaProjects/DayZMacro/src/main/java/traqu/gui/MainView.form",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\piotr\IdeaProjects\DayZMacro\src\main\java\traqu\gui" />
       <recent name="C:\Users\piotr\IdeaProjects\DayZMacro\src\main\java\traqu" />
     </key>
     <key name="IntroduceConstantDialog.RECENTS_KEY">
       <recent name="traqu.MainView" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean install" />
+      <command value="mvn package" />
+      <command value="mvn clean package" />
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application">
@@ -130,7 +149,12 @@
       <workItem from="1720390239403" duration="2406000" />
       <workItem from="1720426136616" duration="1516000" />
       <workItem from="1720427690660" duration="43000" />
-      <workItem from="1720427742961" duration="847000" />
+      <workItem from="1720427742961" duration="1231000" />
+      <workItem from="1720475864543" duration="732000" />
+      <workItem from="1720737800768" duration="344000" />
+      <workItem from="1720782795385" duration="7738000" />
+      <workItem from="1720791155565" duration="772000" />
+      <workItem from="1720791948146" duration="3150000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -140,7 +164,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720372693799</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Base languagecore">
+      <option name="closed" value="true" />
+      <created>1720428782236</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1720428782236</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +194,7 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Base languagecore" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base languagecore" />
   </component>
 </project>

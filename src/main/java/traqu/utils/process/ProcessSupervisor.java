@@ -8,7 +8,7 @@ import com.sun.jna.platform.win32.WinDef.HWND;
 import com.sun.jna.platform.win32.WinNT;
 import com.sun.jna.ptr.IntByReference;
 
-public class ProcessSupervisor {
+public abstract class ProcessSupervisor {
 
     private static final User32 USER_32 = User32.INSTANCE;
 

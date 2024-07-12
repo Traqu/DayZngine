@@ -3,8 +3,9 @@
     <output-path>$PROJECT_DIR$/out/artifacts/DayZMacro_jar</output-path>
     <root id="archive" name="DayZMacro.jar">
       <element id="module-output" name="DayZMacro" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna-platform/5.10.0/jna-platform-5.10.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.10.0/jna-5.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/jgoodies/forms/1.2.1/forms-1.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna-platform/5.10.0/jna-platform-5.10.0.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
