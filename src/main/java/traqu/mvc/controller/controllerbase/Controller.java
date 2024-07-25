@@ -1,8 +1,11 @@
 package traqu.mvc.controller.controllerbase;
 
+import traqu.language.LanguageManager;
 import traqu.mvc.view.viewbase.View;
 
 public abstract class Controller<V extends View> implements IController<V> {
+
+    protected static final LanguageManager LANGUAGE_MANAGER = LanguageManager.getInstance();
     protected V view;
 
     public Controller(V view) {

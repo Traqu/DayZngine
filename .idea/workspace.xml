@@ -9,19 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Improvements to GUI">
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/controllerbase/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/controllerbase/IController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/viewbase/IView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/utils/helpers/ActionListenerHelper.java" afterDir="false" />
+    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Add Lombok library">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/util/annotations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java/util/annotations.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/gui/BaseFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/viewbase/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/gui/MainView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/gui/MainView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/constant/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/language/LanguageManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/language/LanguageManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/controllerbase/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/controllerbase/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/viewbase/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/viewbase/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +95,7 @@
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "Errors",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
     "two.files.diff.last.used.file": "C:/Users/piotr/IdeaProjects/DayZMacro/src/main/java/traqu/mvc/view/MainView.form",
     "vue.rearranger.settings.migration": "true"
   },
@@ -111,6 +107,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\piotr\IdeaProjects\DayZMacro\src\main\java\traqu\mvc\view" />
       <recent name="C:\Users\piotr\IdeaProjects\DayZMacro\src\main\java\traqu\gui" />
       <recent name="C:\Users\piotr\IdeaProjects\DayZMacro\src\main\java\traqu" />
     </key>
@@ -120,6 +117,9 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="traqu.mvc.view2" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="traqu.constant" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -174,7 +174,7 @@
       <workItem from="1721491916296" duration="480000" />
       <workItem from="1721761016911" duration="754000" />
       <workItem from="1721764139132" duration="48000" />
-      <workItem from="1721860459495" duration="10001000" />
+      <workItem from="1721860459495" duration="14987000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -208,7 +208,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720797015398</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Prepare architecture for MVC (view and controller)">
+      <option name="closed" value="true" />
+      <created>1721870745661</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721870745661</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Add Lombok library">
+      <option name="closed" value="true" />
+      <created>1721871552612</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721871552612</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +248,9 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Base languagecore" />
     <MESSAGE value="Improvements to GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvements to GUI" />
+    <MESSAGE value="Prepare architecture for MVC (view and controller)" />
+    <MESSAGE value="Add Lombok library" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Lombok library" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

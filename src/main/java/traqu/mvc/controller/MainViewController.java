@@ -5,6 +5,8 @@ import traqu.mvc.view.MainView;
 
 import java.util.Objects;
 
+
+
 public class MainViewController extends Controller<MainView> {
     public MainViewController(MainView view) {
         super(view);
@@ -30,6 +32,9 @@ public class MainViewController extends Controller<MainView> {
 
     private void handleLanguageButton() {
         System.out.println("Language button clicked");
+        //TODO example
+        view.getButton1().setText(LANGUAGE_MANAGER.getString("settings"));
+        view.pack();
     }
 
     private void handleButton1() {

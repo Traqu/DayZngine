@@ -5,13 +5,34 @@ import java.util.ResourceBundle;
 
 public class LanguageManager {
 
-    public LanguageManager() {
+    /** //TODO
+     *      EXAMPLES:
+     * <p>
+     *       Locale.setDefault(new Locale("pl", "PL"));
+     * <p>
+     *       Locale currentLocale = new Locale("de", "DE");
+     *       ResourceBundle resourceBundle = ResourceBundle.getBundle("localization", currentLocale);
+     */
 
-        /**examples*/
-        Locale.setDefault(new Locale("pl", "PL"));
+    private static LanguageManager instance;
+    private ResourceBundle resourceBundle;
 
-        Locale currentLocale = new Locale("de", "DE");
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("language", currentLocale);
+    private LanguageManager() {
+        setLocale(Locale.getDefault());
+    }
 
+    public static synchronized LanguageManager getInstance() {
+        if (instance == null) {
+            instance = new LanguageManager();
+        }
+        return instance;
+    }
+
+    public void setLocale(Locale locale) {
+        this.resourceBundle = ResourceBundle.getBundle("localization", locale);
+    }
+
+    public String getString(String key) {
+        return resourceBundle.getString(key);
     }
 }
