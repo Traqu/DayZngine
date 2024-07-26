@@ -1,7 +1,6 @@
 package traqu.mvc.view.viewbase;
 
 import traqu.constant.LookAndFeel;
-import traqu.language.LanguageManager;
 
 import javax.swing.*;
 

@@ -10,9 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        SwingUtilities.invokeLater(() -> {
-            MainView view = new MainView();
-        });
+        SwingUtilities.invokeLater(MainView::new);
 
         if (ProcessSupervisor.isCurrentWindow(Constants.DAYZ)) {
             System.out.println("+");

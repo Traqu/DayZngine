@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="traqu.mvc.view.MainView">
   <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="701" height="400"/>
+      <xy x="20" y="20" width="915" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -67,6 +67,8 @@
         <colspec value="left:4dlu:noGrow"/>
         <colspec value="fill:d:grow"/>
         <colspec value="left:4dlu:noGrow"/>
+        <colspec value="fill:max(d;4px):noGrow"/>
+        <colspec value="left:4dlu:noGrow"/>
         <colspec value="fill:d:grow"/>
         <colspec value="left:4dlu:noGrow"/>
         <colspec value="fill:max(d;4px):noGrow"/>
@@ -88,9 +90,9 @@
               <text resource-bundle="localization" key="codelockCracker"/>
             </properties>
           </component>
-          <component id="17dfa" class="javax.swing.JTextField" binding="secondsAmtInput">
+          <component id="17dfa" class="javax.swing.JTextField" binding="cycleTimeInput">
             <constraints>
-              <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
               <forms defaultalign-horz="false"/>
@@ -99,14 +101,14 @@
           </component>
           <component id="2dfa4" class="javax.swing.JButton" binding="crackButton" default-binding="true">
             <constraints>
-              <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
               <forms/>
             </constraints>
             <properties>
               <text resource-bundle="localization" key="executeCracking"/>
             </properties>
           </component>
-          <component id="a07a1" class="javax.swing.JTextField" binding="circlesAmtInput">
+          <component id="a07a1" class="javax.swing.JTextField" binding="cyclesAmountInput">
             <constraints>
               <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
@@ -127,7 +129,7 @@
           </component>
           <component id="7954f" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
               <forms/>
             </constraints>
             <properties>
@@ -147,9 +149,44 @@
               <toolTipText resource-bundle="localization" key="settings"/>
             </properties>
           </component>
+          <grid id="484ee" binding="targetSelectionPanel" layout-manager="FormLayout">
+            <rowspec value="center:d:grow"/>
+            <colspec value="fill:d:grow"/>
+            <colspec value="left:4dlu:noGrow"/>
+            <colspec value="fill:max(d;4px):noGrow"/>
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties/>
+            <border type="bevel-lowered" title-resource-bundle="localization" title-key="crackingTargetPanel" title-justification="2">
+              <font name="Cambria" size="12" style="1"/>
+            </border>
+            <children>
+              <component id="a16e1" class="javax.swing.JRadioButton" binding="gateRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text resource-bundle="localization" key="gate"/>
+                </properties>
+              </component>
+              <component id="c1e3f" class="javax.swing.JRadioButton" binding="storageRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                  <forms/>
+                </constraints>
+                <properties>
+                  <text resource-bundle="localization" key="storage"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
         </children>
       </grid>
-      <component id="492dc" class="javax.swing.JProgressBar" binding="progressBar1" default-binding="true">
+      <component id="492dc" class="javax.swing.JProgressBar" binding="crackingProgressBar">
         <constraints border-constraint="South"/>
         <properties>
           <autoscrolls value="false"/>

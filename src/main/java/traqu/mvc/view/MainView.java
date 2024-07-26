@@ -13,16 +13,23 @@ public class MainView extends View {
     private JPanel settingsPanel;
     private JPanel toolsPanel;
     private JButton crackButton;
-    private JTextField secondsAmtInput;
+    private JTextField cycleTimeInput;
     private JButton languageButton;
-    private JTextField circlesAmtInput;
-    private JProgressBar progressBar1;
+    private JTextField cyclesAmountInput;
+    private JProgressBar crackingProgressBar;
     private JButton button1;
     private JButton presetsButton;
     private JComboBox<String> presetsCombobox;
+    private JPanel targetSelectionPanel;
+    private JRadioButton storageRadioButton;
+    private JRadioButton gateRadioButton;
 
     public MainView() {
         initializeView(mainPanel);
+
+        ButtonGroup buttonGroup = new ButtonGroup();
+        buttonGroup.add(gateRadioButton);
+        buttonGroup.add(storageRadioButton);
     }
 
     @Override
