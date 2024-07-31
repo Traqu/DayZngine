@@ -6,9 +6,10 @@ import traqu.mvc.view.MainView;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Enumeration;
 import java.util.Objects;
 
-import static traqu.constant.Constants.SECOND;
+import static traqu.time.utils.Constants.SECOND;
 
 public class MainViewController extends Controller<MainView> {
 
@@ -29,7 +30,7 @@ public class MainViewController extends Controller<MainView> {
 
         view.getPresetsButton().addActionListener(e -> handlePresetsButton());
 
-        view.getPresetsCombobox().addActionListener(e -> handlePresetsCombobox());
+//        view.getPresetsCombobox().addActionListener(e -> handlePresetsCombobox());
 
         view.getUseManualValuesCheckBox().addActionListener(e -> handleUseManualValuesCheckBox());
     }
@@ -43,8 +44,6 @@ public class MainViewController extends Controller<MainView> {
     }
 
     private void handleCrackButton() {
-        String selectedPreset = Objects.requireNonNull(view.getPresetsCombobox().getSelectedItem()).toString();
-        System.out.println(selectedPreset);
 
         int cyclesAmount;
         int cycleTime;
@@ -56,9 +55,9 @@ public class MainViewController extends Controller<MainView> {
                 CrackWorker.crack(cyclesAmount * 60 * cycleTime, this);
             } catch (NumberFormatException e) {
                 System.err.println("Invalid input!");
-                    setActionLogTextFieldTextColor(Color.RED);
-                    updateActionLogTextField(LANGUAGE_MANAGER.getString("integerRequiredForm"));
-                    view.pack();
+                setActionLogTextFieldTextColor(Color.RED);
+                updateActionLogTextField(LANGUAGE_MANAGER.getString("integerRequiredForm"));
+                view.pack();
                 Timer timer = new Timer(SECOND * 2, actionEvent -> {
                     bringActionLogToDefault();
                     view.pack();
@@ -67,6 +66,8 @@ public class MainViewController extends Controller<MainView> {
                 timer.start();
             }
         } else { //TODO fetch from presets through JComboBox...
+            System.out.println(getSelectedPreset());
+
             cyclesAmount = 0;
             cycleTime = 0;
             CrackWorker.crack(cyclesAmount * 60 * cycleTime, this);
@@ -91,10 +92,10 @@ public class MainViewController extends Controller<MainView> {
         System.out.println("Presets button clicked");
     }
 
-    private void handlePresetsCombobox() {
-        String selectedPreset = Objects.requireNonNull(view.getPresetsCombobox().getSelectedItem()).toString();
-        System.out.println("Selected preset: " + selectedPreset);
-    }
+//    private void handlePresetsCombobox() {
+//        String selectedPreset = Objects.requireNonNull(view.getPresetsCombobox().getSelectedItem()).toString();
+//        System.out.println("Selected preset: " + selectedPreset);
+//    }
 
     public void updateProgress(int value) {
         view.getCrackingProgressBar().setValue(value);
@@ -154,11 +155,39 @@ public class MainViewController extends Controller<MainView> {
         return view.getUseManualValuesCheckBox().isSelected();
     }
 
-    private static void handleManualMode(MainView view) {
-        if (view.getUseManualValuesCheckBox().isSelected()) {
-            System.out.println("Manual mode enabled");
-        } else {
-            System.out.println("Manual mode disabled");
+    public String getChosenTarget() {
+        ButtonGroup targetButtonGroup = view.getTargetButtonGroup();
+        ButtonModel selection = targetButtonGroup.getSelection();
+
+        for (Enumeration<AbstractButton> buttons = targetButtonGroup.getElements(); buttons.hasMoreElements(); ) {
+            AbstractButton button = buttons.nextElement();
+            if (button.getModel() == selection) {
+                System.out.println("Target type: " + button.getText());
+                return button.getText();
+            }
         }
+        return null;
+    }
+
+    public void restartProgressBar() {
+        view.getCrackingProgressBar().setValue(0);
+    }
+
+    public void updateTimeLeft(String text) {
+        JLabel timeLeft = view.getTimeLeft();
+        if (!timeLeft.isVisible()) {
+            timeLeft.setVisible(true);
+        }
+        timeLeft.setText(text);
+        view.pack();
+    }
+
+    public void hideTimeLeft() {
+        view.getTimeLeft().setVisible(false);
+        view.pack();
+    }
+
+    public String getSelectedPreset() {
+        return Objects.requireNonNull(view.getPresetsCombobox().getSelectedItem()).toString().replace(" ", "");
     }
 }

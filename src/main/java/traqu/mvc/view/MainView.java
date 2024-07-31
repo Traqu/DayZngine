@@ -8,6 +8,8 @@ import javax.swing.*;
 
 @Getter
 public class MainView extends View {
+    @Getter
+    private final ButtonGroup targetButtonGroup;
     private JPanel mainPanel;
     private JPanel infoPanel;
     private JPanel settingsPanel;
@@ -26,13 +28,14 @@ public class MainView extends View {
     private JTextField actionLogTextField;
     private JCheckBox useManualValuesCheckBox;
     private JButton preferencesButton;
+    private JLabel timeLeft;
 
     public MainView() {
         initializeView(mainPanel);
 
-        ButtonGroup buttonGroup = new ButtonGroup();
-        buttonGroup.add(gateRadioButton);
-        buttonGroup.add(storageRadioButton);
+        targetButtonGroup = new ButtonGroup();
+        targetButtonGroup.add(gateRadioButton);
+        targetButtonGroup.add(storageRadioButton);
     }
 
     @Override

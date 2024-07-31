@@ -10,9 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Update CrackWorker">
+      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/time/utils/TimeCalculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/constant/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/CrackWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/CrackWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/localization.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +194,7 @@
       <workItem from="1722376600925" duration="201000" />
       <workItem from="1722376807293" duration="18578000" />
       <workItem from="1722428724071" duration="12871000" />
-      <workItem from="1722444276855" duration="3104000" />
+      <workItem from="1722444276855" duration="9330000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -256,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722385087594</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update CrackWorker">
+      <option name="closed" value="true" />
+      <created>1722448378468</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722448378468</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

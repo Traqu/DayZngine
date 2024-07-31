@@ -4,13 +4,14 @@ import traqu.language.LanguageManager;
 import traqu.mvc.controller.MainViewController;
 import traqu.mvc.view.MainView;
 import traqu.process.utils.ProcessSupervisor;
+import traqu.time.utils.TimeCalculator;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.InputEvent;
 
-import static traqu.constant.Constants.DAYZ;
-import static traqu.constant.Constants.SECOND;
+import static traqu.constant.Constants.*;
+import static traqu.time.utils.Constants.*;
 
 public abstract class CrackWorker {
     private static final Robot ROBOT;
@@ -29,6 +30,8 @@ public abstract class CrackWorker {
         controller.disableCrackingButton();
 
         SwingWorker<Void, Void> combinedWorker = new SwingWorker<>() {
+
+
             @Override
             protected Void doInBackground() throws Exception {
                 int countdownTime = 5;
@@ -53,10 +56,17 @@ public abstract class CrackWorker {
                 controller.updateProgress(0);
 
                 ROBOT.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                Thread.sleep(handleAnimationByTarget(controller)); //holding button for additional milliseconds, to not lose time on entry animation
+
+                final long startTime = TimeCalculator.getStartTime();
+
                 for (int i = 0; i < totalCrackingTime; i++) {
                     Thread.sleep(SECOND);
+                    int elapsedTime = TimeCalculator.calculateElapsedTime(startTime);
                     final int progress = i + 1;
                     controller.updateProgress(progress);
+                    String timeLeft = TimeCalculator.formatTimeLeft(totalCrackingTime, elapsedTime);
+                    controller.updateTimeLeft(java.text.MessageFormat.format(LANGUAGE_MANAGER.getString("timeLeft"), timeLeft));
                     System.out.println("Progress: " + progress + "/" + totalCrackingTime);
                 }
                 ROBOT.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
@@ -68,11 +78,13 @@ public abstract class CrackWorker {
                 controller.crackingComplete();
                 controller.restoreActionLogTextFieldTextColor();
                 controller.enableCrackingButton();
+                controller.restartProgressBar();
 
                 SwingUtilities.invokeLater(() -> {
                     Timer timer = new Timer(SECOND * 2, e -> {
                         controller.clearActionLogText();
                         controller.enableCrackingButton();
+                        controller.hideTimeLeft();
                     });
                     timer.setRepeats(false);
                     timer.start();
@@ -80,5 +92,16 @@ public abstract class CrackWorker {
             }
         };
         combinedWorker.execute();
+    }
+
+    private static int handleAnimationByTarget(MainViewController controller) {
+        String targetType = controller.getChosenTarget();
+        if (targetType.equalsIgnoreCase("gate")) {
+            System.out.println("Currently cracking gate!");
+            return SAWING_ANIMATION_ENTRY_TIME;
+        } else if (targetType.equalsIgnoreCase("storage")) {
+            System.out.println("Currently cracking storage!");
+            return TINKERING_ANIMATION_ENTRY_TIME;
+        } else return 0;
     }
 }
