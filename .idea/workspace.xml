@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="DayZMacro:jar" />
+      <artifact name="DayZngine:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Add handling using times for presets">
+    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/DayZMacro_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/DayZngine_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/time/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/time/utils/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,49 +61,50 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [org.apache.maven.plugins:maven-jar-plugin:3.2.0:jar].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [site].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RESOURCE_BUNDLE_EXPRESSION_USED&quot;: &quot;&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE&quot;: &quot;right&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;left&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/piotr/IdeaProjects/DayZMacro/src/main/resources/graphics/icons&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/piotr/IdeaProjects/DayZMacro/src/main/java/traqu/mvc/view/MainView.form&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Application.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Maven.DayZMacro [clean,install].executor": "Run",
+    "Maven.DayZMacro [clean,package].executor": "Run",
+    "Maven.DayZMacro [clean].executor": "Run",
+    "Maven.DayZMacro [compile].executor": "Run",
+    "Maven.DayZMacro [install].executor": "Run",
+    "Maven.DayZMacro [org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy].executor": "Run",
+    "Maven.DayZMacro [org.apache.maven.plugins:maven-jar-plugin:3.2.0:jar].executor": "Run",
+    "Maven.DayZMacro [package].executor": "Run",
+    "Maven.DayZMacro [site].executor": "Run",
+    "Maven.DayZMacro [test].executor": "Run",
+    "Maven.DayZMacro [validate].executor": "Run",
+    "Maven.DayZMacro [verify].executor": "Run",
+    "RESOURCE_BUNDLE_EXPRESSION_USED": "",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE": "right",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE": "left",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/piotr/IdeaProjects/DayZMacro/src/main/resources/graphics/icons",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "two.files.diff.last.used.file": "C:/Users/piotr/IdeaProjects/DayZMacro/src/main/java/traqu/mvc/view/MainView.form",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="traqu.mvc.controller" />
@@ -138,7 +142,7 @@
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="traqu.Main" />
-      <module name="DayZMacro" />
+      <module name="DayZngine" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -191,6 +195,7 @@
       <workItem from="1722376807293" duration="18578000" />
       <workItem from="1722428724071" duration="12871000" />
       <workItem from="1722444276855" duration="13487000" />
+      <workItem from="1722460029221" duration="658000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -280,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722458382958</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update">
+      <option name="closed" value="true" />
+      <created>1722460043202</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1722460043202</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,9 +321,9 @@
     <MESSAGE value="Add Lombok library" />
     <MESSAGE value="Prepare LanguageManager" />
     <MESSAGE value="Update CrackWorker" />
-    <MESSAGE value="Update" />
     <MESSAGE value="Add handling using times for presets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add handling using times for presets" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

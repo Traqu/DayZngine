@@ -1,10 +1,11 @@
 package traqu.time.utils;
 
 public abstract class Constants {
+    public static final int MILLISECOND = 1;
     /**
      * A second expressed in milliseconds
      */
-    public static final int SECOND = 1000;
+    public static final int SECOND = MILLISECOND * 1000;
     /**
      * Time needed to complete the animation expressed in milliseconds before starting proper action
      */
