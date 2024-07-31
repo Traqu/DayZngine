@@ -53,7 +53,7 @@ public class MainViewController extends Controller<MainView> {
             try {
                 cyclesAmount = Integer.parseInt(view.getCyclesAmountInput().getText());
                 cycleTime = Integer.parseInt(view.getCycleTimeInput().getText());
-                CrackWorker.crack(cyclesAmount, cycleTime, this);
+                CrackWorker.crack(cyclesAmount * 60 * cycleTime, this);
             } catch (NumberFormatException e) {
                 System.err.println("Invalid input!");
                     setActionLogTextFieldTextColor(Color.RED);
@@ -69,7 +69,7 @@ public class MainViewController extends Controller<MainView> {
         } else { //TODO fetch from presets through JComboBox...
             cyclesAmount = 0;
             cycleTime = 0;
-            CrackWorker.crack(cyclesAmount, cycleTime, this);
+            CrackWorker.crack(cyclesAmount * 60 * cycleTime, this);
         }
     }
 

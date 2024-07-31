@@ -1,6 +1,5 @@
 package traqu.dayz.raidingtools;
 
-import lombok.SneakyThrows;
 import traqu.language.LanguageManager;
 import traqu.mvc.controller.MainViewController;
 import traqu.mvc.view.MainView;
@@ -16,7 +15,7 @@ import static traqu.constant.Constants.SECOND;
 public abstract class CrackWorker {
     private static final Robot ROBOT;
     private static final LanguageManager LANGUAGE_MANAGER = LanguageManager.getInstance();
-    private static int totalCrackingTime;
+
     static {
         try {
             ROBOT = new Robot();
@@ -25,21 +24,31 @@ public abstract class CrackWorker {
         }
     }
 
-    public static void crack(int cyclesAmount, int cycleTime, MainViewController controller) {
-
+    public static void crack(int totalCrackingTime, MainViewController controller) {
         MainView view = controller.getView();
-
         controller.disableCrackingButton();
 
-        handleManualMode(cyclesAmount, cycleTime, controller); //TODO
-
-        SwingWorker<Void, Void> progressBarWorker = new SwingWorker<>() {
-
-
+        SwingWorker<Void, Void> combinedWorker = new SwingWorker<>() {
             @Override
             protected Void doInBackground() throws Exception {
+                int countdownTime = 5;
+                for (int i = countdownTime; i > 0; i--) {
+                    controller.setActionLogTextFieldTextColor(Color.RED);
+                    controller.updateActionLogTextField(java.text.MessageFormat.format(LANGUAGE_MANAGER.getString("timeLeftToFocus"), i));
+                    view.pack();
+                    System.out.println(LANGUAGE_MANAGER.getString("timeLeftToFocus") + i);
+                    Thread.sleep(SECOND);
+                }
+                controller.updateActionLogTextField(LANGUAGE_MANAGER.getString("crackingInProgress"));
+                view.pack();
 
-                controller.disableCrackingButton();
+                if (!ProcessSupervisor.isCurrentWindow(DAYZ)) {
+                    System.out.println("You are not focused on DayZ!");
+                    controller.updateActionLogTextField(LANGUAGE_MANAGER.getString("invalidProcess"));
+                    view.pack();
+                    return null;
+                }
+
                 controller.updateProgressMaximum(totalCrackingTime);
                 controller.updateProgress(0);
 
@@ -57,55 +66,19 @@ public abstract class CrackWorker {
             @Override
             protected void done() {
                 controller.crackingComplete();
-                controller.enableCrackingButton();
-            }
-        };
-
-        SwingWorker<Void, Void> actionLogCountdownWorker = new SwingWorker<>() {
-
-            @Override
-            protected Void doInBackground() {
-                int countdownTime = 5;
-                for (int i = countdownTime; i > 0; i--) {
-                    try {
-                        controller.setActionLogTextFieldTextColor(Color.RED);
-                        controller.updateActionLogTextField(java.text.MessageFormat.format(LANGUAGE_MANAGER.getString("timeLeftToFocus"), i));
-                        view.pack();
-                        System.out.println(LANGUAGE_MANAGER.getString("timeLeftToFocus") + i);
-                        Thread.sleep(SECOND);
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-
-                if (!ProcessSupervisor.isCurrentWindow(DAYZ)) {
-                    System.out.println("You are not focused on DayZ!");
-                    controller.updateActionLogTextField(LANGUAGE_MANAGER.getString("invalidProcess"));
-                    view.pack();
-                } else {
-                    progressBarWorker.execute();
-                }
-                return null;
-            }
-
-            @SneakyThrows
-            @Override
-            protected void done() {
-                super.done();
                 controller.restoreActionLogTextFieldTextColor();
-                Thread.sleep(SECOND * 3);
-                controller.clearActionLogText();
                 controller.enableCrackingButton();
+
+                SwingUtilities.invokeLater(() -> {
+                    Timer timer = new Timer(SECOND * 2, e -> {
+                        controller.clearActionLogText();
+                        controller.enableCrackingButton();
+                    });
+                    timer.setRepeats(false);
+                    timer.start();
+                });
             }
         };
-        actionLogCountdownWorker.execute();
-    }
-
-    private static void handleManualMode(int cyclesAmount, int cycleTime, MainViewController controller) {
-        if (controller.isManualModeEnabled()) {
-            totalCrackingTime = cyclesAmount * 60 * cycleTime;
-        } else {
-            System.out.println("Disabled manual mode");
-        }
+        combinedWorker.execute();
     }
 }
