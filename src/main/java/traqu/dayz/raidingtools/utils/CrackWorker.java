@@ -1,4 +1,4 @@
-package traqu.dayz.raidingtools;
+package traqu.dayz.raidingtools.utils;
 
 import traqu.language.LanguageManager;
 import traqu.mvc.controller.MainViewController;

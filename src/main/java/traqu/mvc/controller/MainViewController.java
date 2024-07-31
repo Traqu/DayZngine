@@ -1,6 +1,8 @@
 package traqu.mvc.controller;
 
-import traqu.dayz.raidingtools.CrackWorker;
+import traqu.constant.PresetConstants;
+import traqu.dayz.raidingtools.utils.CrackWorker;
+import traqu.io.utils.presets.PresetHandler;
 import traqu.mvc.controller.controllerbase.Controller;
 import traqu.mvc.view.MainView;
 
@@ -11,7 +13,7 @@ import java.util.Objects;
 
 import static traqu.time.utils.Constants.SECOND;
 
-public class MainViewController extends Controller<MainView> {
+public class MainViewController extends Controller<MainView> implements PresetConstants {
 
     private final Color DETAULT_FOREGROUND_COLOR;
 
@@ -52,7 +54,7 @@ public class MainViewController extends Controller<MainView> {
             try {
                 cyclesAmount = Integer.parseInt(view.getCyclesAmountInput().getText());
                 cycleTime = Integer.parseInt(view.getCycleTimeInput().getText());
-                CrackWorker.crack(cyclesAmount * 60 * cycleTime, this);
+                crackTheCodelock(cyclesAmount, cycleTime);
             } catch (NumberFormatException e) {
                 System.err.println("Invalid input!");
                 setActionLogTextFieldTextColor(Color.RED);
@@ -65,18 +67,37 @@ public class MainViewController extends Controller<MainView> {
                 timer.setRepeats(false);
                 timer.start();
             }
-        } else { //TODO fetch from presets through JComboBox...
-            System.out.println(getSelectedPreset());
-
-            cyclesAmount = 0;
-            cycleTime = 0;
-            CrackWorker.crack(cyclesAmount * 60 * cycleTime, this);
+        } else {
+            runWithValuesForPresetByTargetType();
         }
+    }
+
+    private void runWithValuesForPresetByTargetType() {
+        int cycleTime;
+        int cyclesAmount;
+        String[] presetValuesArray = PresetHandler.getPresetValues(getSelectedPreset());
+        String targetType = getChosenTarget();
+
+        if (presetValuesArray != null) {
+            if (targetType.equalsIgnoreCase("gate")) {
+                cyclesAmount = Integer.parseInt(presetValuesArray[GATE_CYCLES_AMOUNT]);
+                cycleTime = Integer.parseInt(presetValuesArray[GATE_CYCLE_TIME]);
+                crackTheCodelock(cyclesAmount, cycleTime);
+            } else if (targetType.equalsIgnoreCase("storage")) {
+                cyclesAmount = Integer.parseInt(presetValuesArray[STORAGE_CYCLES_AMOUNT]);
+                cycleTime = Integer.parseInt(presetValuesArray[STORAGE_CYCLE_TIME]);
+                crackTheCodelock(cyclesAmount, cycleTime);
+            }
+        }
+    }
+
+    private void crackTheCodelock(int cyclesAmount, int cycleTime) {
+        CrackWorker.crack(cyclesAmount * 60 * cycleTime, this);
     }
 
     private void handleLanguageButton() {
         System.out.println("Language button clicked");
-        //TODO example
+        //TODO example OR interface → JFrame changeFrame() //JFrame so you can popBack
         // view.dispose();
         // SwingUtilities.invokeLater(LanguageView::new);
 

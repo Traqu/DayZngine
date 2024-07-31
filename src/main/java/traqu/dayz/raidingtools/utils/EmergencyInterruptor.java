@@ -1,4 +1,4 @@
-package traqu.dayz.raidingtools;
+package traqu.dayz.raidingtools.utils;
 
 public class EmergencyInterruptor {
 }

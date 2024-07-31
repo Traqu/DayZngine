@@ -9,15 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Update CrackWorker">
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/time/utils/TimeCalculator.java" afterDir="false" />
+    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/constant/PresetConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/io/utils/presets/PresetHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/io/utils/settings/SettingsHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/constant/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/CrackWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/CrackWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/CrackWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/CrackWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/EmergencyInterruptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/EmergencyInterruptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/localization.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +26,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -109,6 +109,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="traqu.mvc.controller" />
       <recent name="traqu.mvc.view" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -122,6 +123,7 @@
       <recent name="C:\Users\piotr\IdeaProjects\DayZMacro\src\main\java\traqu\mvc\view\viewbase\mainview" />
     </key>
     <key name="IntroduceConstantDialog.RECENTS_KEY">
+      <recent name="traqu.io.utils.PresetHandler" />
       <recent name="traqu.gui.MainView" />
       <recent name="traqu.MainView" />
     </key>
@@ -194,7 +196,7 @@
       <workItem from="1722376600925" duration="201000" />
       <workItem from="1722376807293" duration="18578000" />
       <workItem from="1722428724071" duration="12871000" />
-      <workItem from="1722444276855" duration="9330000" />
+      <workItem from="1722444276855" duration="12531000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -268,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722448378468</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update">
+      <option name="closed" value="true" />
+      <created>1722455271626</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722455271626</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +306,8 @@
     <MESSAGE value="Add Lombok library" />
     <MESSAGE value="Prepare LanguageManager" />
     <MESSAGE value="Update CrackWorker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update CrackWorker" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
