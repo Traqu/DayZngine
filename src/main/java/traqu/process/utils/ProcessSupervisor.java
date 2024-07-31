@@ -1,4 +1,4 @@
-package traqu.utils.process;
+package traqu.process.utils;
 
 import com.sun.jna.Native;
 import com.sun.jna.platform.win32.Kernel32;

@@ -3,9 +3,8 @@ package traqu.dayz.raidingtools;
 import lombok.SneakyThrows;
 import traqu.language.LanguageManager;
 import traqu.mvc.controller.MainViewController;
-import traqu.mvc.controller.controllerbase.Controller;
 import traqu.mvc.view.MainView;
-import traqu.utils.process.ProcessSupervisor;
+import traqu.process.utils.ProcessSupervisor;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,7 +16,7 @@ import static traqu.constant.Constants.SECOND;
 public abstract class CrackWorker {
     private static final Robot ROBOT;
     private static final LanguageManager LANGUAGE_MANAGER = LanguageManager.getInstance();
-
+    private static int totalCrackingTime;
     static {
         try {
             ROBOT = new Robot();
@@ -32,20 +31,15 @@ public abstract class CrackWorker {
 
         controller.disableCrackingButton();
 
+        handleManualMode(cyclesAmount, cycleTime, controller); //TODO
+
         SwingWorker<Void, Void> progressBarWorker = new SwingWorker<>() {
+
+
             @Override
             protected Void doInBackground() throws Exception {
 
                 controller.disableCrackingButton();
-
-                if (controller.isManualModeEnabled()) { //TODO
-                    System.out.println("Manual mode");
-                } else {
-                    System.out.println("Disabled manual mode");
-                }
-
-                int totalCrackingTime = cyclesAmount * 60 * cycleTime;
-
                 controller.updateProgressMaximum(totalCrackingTime);
                 controller.updateProgress(0);
 
@@ -85,6 +79,7 @@ public abstract class CrackWorker {
                 }
 
                 if (!ProcessSupervisor.isCurrentWindow(DAYZ)) {
+                    System.out.println("You are not focused on DayZ!");
                     controller.updateActionLogTextField(LANGUAGE_MANAGER.getString("invalidProcess"));
                     view.pack();
                 } else {
@@ -104,5 +99,13 @@ public abstract class CrackWorker {
             }
         };
         actionLogCountdownWorker.execute();
+    }
+
+    private static void handleManualMode(int cyclesAmount, int cycleTime, MainViewController controller) {
+        if (controller.isManualModeEnabled()) {
+            totalCrackingTime = cyclesAmount * 60 * cycleTime;
+        } else {
+            System.out.println("Disabled manual mode");
+        }
     }
 }

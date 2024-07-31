@@ -4,8 +4,11 @@ import traqu.dayz.raidingtools.CrackWorker;
 import traqu.mvc.controller.controllerbase.Controller;
 import traqu.mvc.view.MainView;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.Objects;
+
+import static traqu.constant.Constants.SECOND;
 
 public class MainViewController extends Controller<MainView> {
 
@@ -42,9 +45,32 @@ public class MainViewController extends Controller<MainView> {
     private void handleCrackButton() {
         String selectedPreset = Objects.requireNonNull(view.getPresetsCombobox().getSelectedItem()).toString();
         System.out.println(selectedPreset);
-        int cyclesAmount = Integer.parseInt(view.getCyclesAmountInput().getText());
-        int cycleTime = Integer.parseInt(view.getCycleTimeInput().getText());
-        CrackWorker.crack(cyclesAmount, cycleTime, this);
+
+        int cyclesAmount;
+        int cycleTime;
+
+        if (isManualModeEnabled()) {
+            try {
+                cyclesAmount = Integer.parseInt(view.getCyclesAmountInput().getText());
+                cycleTime = Integer.parseInt(view.getCycleTimeInput().getText());
+                CrackWorker.crack(cyclesAmount, cycleTime, this);
+            } catch (NumberFormatException e) {
+                System.err.println("Invalid input!");
+                    setActionLogTextFieldTextColor(Color.RED);
+                    updateActionLogTextField(LANGUAGE_MANAGER.getString("integerRequiredForm"));
+                    view.pack();
+                Timer timer = new Timer(SECOND * 2, actionEvent -> {
+                    bringActionLogToDefault();
+                    view.pack();
+                });
+                timer.setRepeats(false);
+                timer.start();
+            }
+        } else { //TODO fetch from presets through JComboBox...
+            cyclesAmount = 0;
+            cycleTime = 0;
+            CrackWorker.crack(cyclesAmount, cycleTime, this);
+        }
     }
 
     private void handleLanguageButton() {
@@ -91,6 +117,11 @@ public class MainViewController extends Controller<MainView> {
         view.getActionLogTextField().setDisabledTextColor(DETAULT_FOREGROUND_COLOR);
     }
 
+    private void bringActionLogToDefault() {
+        restoreActionLogTextFieldTextColor();
+        clearActionLogText();
+    }
+
     public void crackingComplete() {
         view.getCrackingProgressBar().setValue(view.getCrackingProgressBar().getMaximum());
         view.repaint();
@@ -121,5 +152,13 @@ public class MainViewController extends Controller<MainView> {
 
     public boolean isManualModeEnabled() {
         return view.getUseManualValuesCheckBox().isSelected();
+    }
+
+    private static void handleManualMode(MainView view) {
+        if (view.getUseManualValuesCheckBox().isSelected()) {
+            System.out.println("Manual mode enabled");
+        } else {
+            System.out.println("Manual mode disabled");
+        }
     }
 }

@@ -2,6 +2,9 @@
     <item name='java.util.List'>
         <annotation name='org.jetbrains.annotations.NonNls'/>
     </item>
+    <item name='java.util.Properties Properties()'>
+        <annotation name='org.jetbrains.annotations.NonNls'/>
+    </item>
     <item name='java.util.ResourceBundle'>
         <annotation name='org.jetbrains.annotations.NonNls'/>
     </item>
