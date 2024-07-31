@@ -24,7 +24,8 @@ public class MainView extends View {
     private JRadioButton storageRadioButton;
     private JRadioButton gateRadioButton;
     private JTextField actionLogTextField;
-    private JTextField actionLogPreviewTextField;
+    private JCheckBox useManualValuesCheckBox;
+    private JButton preferencesButton;
 
     public MainView() {
         initializeView(mainPanel);

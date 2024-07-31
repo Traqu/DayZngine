@@ -1,7 +1,9 @@
 package traqu.dayz.raidingtools;
 
+import lombok.SneakyThrows;
 import traqu.language.LanguageManager;
 import traqu.mvc.controller.MainViewController;
+import traqu.mvc.controller.controllerbase.Controller;
 import traqu.mvc.view.MainView;
 import traqu.utils.process.ProcessSupervisor;
 
@@ -28,9 +30,19 @@ public abstract class CrackWorker {
 
         MainView view = controller.getView();
 
+        controller.disableCrackingButton();
+
         SwingWorker<Void, Void> progressBarWorker = new SwingWorker<>() {
             @Override
             protected Void doInBackground() throws Exception {
+
+                controller.disableCrackingButton();
+
+                if (controller.isManualModeEnabled()) { //TODO
+                    System.out.println("Manual mode");
+                } else {
+                    System.out.println("Disabled manual mode");
+                }
 
                 int totalCrackingTime = cyclesAmount * 60 * cycleTime;
 
@@ -51,6 +63,7 @@ public abstract class CrackWorker {
             @Override
             protected void done() {
                 controller.crackingComplete();
+                controller.enableCrackingButton();
             }
         };
 
@@ -80,11 +93,14 @@ public abstract class CrackWorker {
                 return null;
             }
 
+            @SneakyThrows
             @Override
             protected void done() {
                 super.done();
                 controller.restoreActionLogTextFieldTextColor();
+                Thread.sleep(SECOND * 3);
                 controller.clearActionLogText();
+                controller.enableCrackingButton();
             }
         };
         actionLogCountdownWorker.execute();

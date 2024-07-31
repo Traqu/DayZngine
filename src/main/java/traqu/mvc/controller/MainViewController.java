@@ -27,6 +27,16 @@ public class MainViewController extends Controller<MainView> {
         view.getPresetsButton().addActionListener(e -> handlePresetsButton());
 
         view.getPresetsCombobox().addActionListener(e -> handlePresetsCombobox());
+
+        view.getUseManualValuesCheckBox().addActionListener(e -> handleUseManualValuesCheckBox());
+    }
+
+    private void handleUseManualValuesCheckBox() {
+        if (!view.getUseManualValuesCheckBox().isSelected()) { //looks stupid but works...
+            enableManualSelection();
+        } else {
+            disableManualSelection();
+        }
     }
 
     private void handleCrackButton() {
@@ -88,6 +98,28 @@ public class MainViewController extends Controller<MainView> {
     }
 
     public void clearActionLogText() {
-        view.getActionLogPreviewTextField().setText("");
+        view.getActionLogTextField().setText("");
+    }
+
+    public void disableCrackingButton() {
+        view.getCrackButton().setEnabled(false);
+    }
+
+    public void enableCrackingButton() {
+        view.getCrackButton().setEnabled(true);
+    }
+
+    public void enableManualSelection() {
+        view.getCyclesAmountInput().setEnabled(false);
+        view.getCycleTimeInput().setEnabled(false);
+    }
+
+    public void disableManualSelection() {
+        view.getCyclesAmountInput().setEnabled(true);
+        view.getCycleTimeInput().setEnabled(true);
+    }
+
+    public boolean isManualModeEnabled() {
+        return view.getUseManualValuesCheckBox().isSelected();
     }
 }
