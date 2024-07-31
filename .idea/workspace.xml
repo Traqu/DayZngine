@@ -10,30 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Prepare LanguageManager">
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/CrackWorker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/EmergencyBroker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/LanguageViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/PresetsView.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/PresetsView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/viewbase/LanguageView.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/viewbase/LanguageView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/flags/France.256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/flags/Germany.256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/flags/Poland.256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/flags/Russia.256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/flags/Spain.256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/flags/United-Kingdom.256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/graphics/flags/United-States.256.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/lang/annotations.xml" beforeDir="false" afterPath="$PROJECT_DIR$/java/lang/annotations.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/constant/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/RaidMacro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/Autorun.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/qualityoflife/Autorun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/Earplugs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/qualityoflife/Earplugs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/CrackWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/CrackWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/viewbase/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/viewbase/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/localization.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,49 +65,49 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Application.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Maven.DayZMacro [clean,install].executor": "Run",
-    "Maven.DayZMacro [clean,package].executor": "Run",
-    "Maven.DayZMacro [clean].executor": "Run",
-    "Maven.DayZMacro [compile].executor": "Run",
-    "Maven.DayZMacro [install].executor": "Run",
-    "Maven.DayZMacro [org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy].executor": "Run",
-    "Maven.DayZMacro [org.apache.maven.plugins:maven-jar-plugin:3.2.0:jar].executor": "Run",
-    "Maven.DayZMacro [package].executor": "Run",
-    "Maven.DayZMacro [site].executor": "Run",
-    "Maven.DayZMacro [test].executor": "Run",
-    "Maven.DayZMacro [validate].executor": "Run",
-    "Maven.DayZMacro [verify].executor": "Run",
-    "RESOURCE_BUNDLE_EXPRESSION_USED": "",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE": "right",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE": "left",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/piotr/IdeaProjects/DayZMacro/src/main/java/traqu/mvc/view/MainView.form",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "two.files.diff.last.used.file": "C:/Users/piotr/IdeaProjects/DayZMacro/src/main/java/traqu/mvc/view/MainView.form",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [clean,install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [org.apache.maven.plugins:maven-jar-plugin:3.2.0:jar].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [site].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DayZMacro [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RESOURCE_BUNDLE_EXPRESSION_USED&quot;: &quot;&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE&quot;: &quot;right&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;left&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/piotr/IdeaProjects/DayZMacro/src/main/java/traqu/mvc/view/MainView.form&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/piotr/IdeaProjects/DayZMacro/src/main/java/traqu/mvc/view/MainView.form&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="traqu.mvc.view" />
@@ -203,6 +187,10 @@
       <workItem from="1721944026490" duration="169000" />
       <workItem from="1721944241917" duration="9000" />
       <workItem from="1721954833940" duration="7307000" />
+      <workItem from="1722021417286" duration="467000" />
+      <workItem from="1722364723271" duration="398000" />
+      <workItem from="1722376600925" duration="201000" />
+      <workItem from="1722376807293" duration="7779000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />

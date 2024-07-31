@@ -23,6 +23,8 @@ public class MainView extends View {
     private JPanel targetSelectionPanel;
     private JRadioButton storageRadioButton;
     private JRadioButton gateRadioButton;
+    private JTextField actionLogTextField;
+    private JTextField actionLogPreviewTextField;
 
     public MainView() {
         initializeView(mainPanel);

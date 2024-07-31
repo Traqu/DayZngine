@@ -4,11 +4,16 @@ import traqu.dayz.raidingtools.CrackWorker;
 import traqu.mvc.controller.controllerbase.Controller;
 import traqu.mvc.view.MainView;
 
+import java.awt.*;
 import java.util.Objects;
 
 public class MainViewController extends Controller<MainView> {
+
+    private final Color DETAULT_FOREGROUND_COLOR;
+
     public MainViewController(MainView view) {
         super(view);
+        DETAULT_FOREGROUND_COLOR = view.getActionLogTextField().getForeground();
     }
 
     @Override
@@ -27,7 +32,9 @@ public class MainViewController extends Controller<MainView> {
     private void handleCrackButton() {
         String selectedPreset = Objects.requireNonNull(view.getPresetsCombobox().getSelectedItem()).toString();
         System.out.println(selectedPreset);
-        CrackWorker.crack(Integer.parseInt(view.getCyclesAmountInput().getText()), Integer.parseInt(view.getCycleTimeInput().getText()), this);
+        int cyclesAmount = Integer.parseInt(view.getCyclesAmountInput().getText());
+        int cycleTime = Integer.parseInt(view.getCycleTimeInput().getText());
+        CrackWorker.crack(cyclesAmount, cycleTime, this);
     }
 
     private void handleLanguageButton() {
@@ -62,9 +69,25 @@ public class MainViewController extends Controller<MainView> {
         view.getCrackingProgressBar().setMaximum(max);
     }
 
+    public void updateActionLogTextField(String text) {
+        view.getActionLogTextField().setText(text);
+    }
+
+    public void setActionLogTextFieldTextColor(Color color) {
+        view.getActionLogTextField().setDisabledTextColor(color);
+    }
+
+    public void restoreActionLogTextFieldTextColor() {
+        view.getActionLogTextField().setDisabledTextColor(DETAULT_FOREGROUND_COLOR);
+    }
+
     public void crackingComplete() {
         view.getCrackingProgressBar().setValue(view.getCrackingProgressBar().getMaximum());
         view.repaint();
         System.out.println("Cracking complete!");
+    }
+
+    public void clearActionLogText() {
+        view.getActionLogPreviewTextField().setText("");
     }
 }
