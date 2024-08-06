@@ -1,8 +1,7 @@
 package traqu.mvc.controller;
 
 import traqu.mvc.controller.controllerbase.Controller;
-import traqu.mvc.view.PresetsView;
-import traqu.mvc.view.viewbase.LanguageView;
+import traqu.mvc.view.LanguageView;
 
 public class LanguageViewController extends Controller<LanguageView> {
     /** @param view this */

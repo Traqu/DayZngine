@@ -16,8 +16,7 @@ public abstract class PresetHandler {
         try (FileInputStream input = new FileInputStream(PRESETS_FILE_PATH)) {
             properties.load(input);
             String property = properties.getProperty(key);
-            String[] presetValuesArray = property.split(",");
-            return presetValuesArray;
+            return property.split(",");
         } catch (IOException e) {
             System.err.println("Failed to load preset: " + e.getMessage());
             return null;

@@ -160,6 +160,7 @@
             <properties>
               <model>
                 <item value="Basically Vanilla"/>
+                <item value="The Day Before"/>
               </model>
               <toolTipText resource-bundle="localization" key="settings"/>
             </properties>

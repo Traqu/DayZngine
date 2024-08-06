@@ -1,6 +1,9 @@
 package traqu.settings.utils;
 
 import lombok.SneakyThrows;
+import traqu.io.utils.presets.DefaultPresetInitializer;
+import traqu.io.utils.presets.PresetsProperty;
+import traqu.io.utils.settings.SettingsProperty;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -41,9 +44,8 @@ public abstract class AppDataFilesInitializer {
     private static void initializeDefaultPresets() {
         File presetsFile = new File(PRESETS, "presets.properties");
         if (!presetsFile.exists()) {
-            Properties presets = new Properties();
-            presets.setProperty("BasicallyVanilla", "Gate,6,5,Storage,5,1");
-
+            PresetsProperty presets = new PresetsProperty();
+            DefaultPresetInitializer.initPresets(presets);
             try (FileOutputStream output = new FileOutputStream(presetsFile)) {
                 presets.store(output, "Default presets");
                 System.out.println("Default settings initialized.");
@@ -57,9 +59,9 @@ public abstract class AppDataFilesInitializer {
     private static void initializeDefaultSettings() {
         File settingsFile = new File(SETTINGS, "settings.properties");
         if (!settingsFile.exists()) {
-            Properties settings = new Properties();
-            settings.setProperty("language", "en");
-            settings.setProperty("theme", "light");
+            SettingsProperty settings = new SettingsProperty();
+            settings.setSetting("language", "en");
+            settings.setSetting("theme", "light");
 
             try (FileOutputStream output = new FileOutputStream(settingsFile)) {
                 settings.store(output, "Default settings");

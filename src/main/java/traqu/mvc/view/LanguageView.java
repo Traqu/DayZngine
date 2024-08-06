@@ -1,6 +1,7 @@
-package traqu.mvc.view.viewbase;
+package traqu.mvc.view;
 
 import traqu.mvc.controller.LanguageViewController;
+import traqu.mvc.view.viewbase.View;
 
 import javax.swing.*;
 

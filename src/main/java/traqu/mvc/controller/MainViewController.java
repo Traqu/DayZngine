@@ -11,7 +11,7 @@ import java.awt.*;
 import java.util.Enumeration;
 import java.util.Objects;
 
-import static traqu.time.utils.Constants.SECOND;
+import static traqu.time.utils.Constants.MILLISECOND;
 
 public class MainViewController extends Controller<MainView> implements PresetConstants {
 
@@ -31,8 +31,6 @@ public class MainViewController extends Controller<MainView> implements PresetCo
         view.getButton1().addActionListener(e -> handleButton1());
 
         view.getPresetsButton().addActionListener(e -> handlePresetsButton());
-
-//        view.getPresetsCombobox().addActionListener(e -> handlePresetsCombobox());
 
         view.getUseManualValuesCheckBox().addActionListener(e -> handleUseManualValuesCheckBox());
     }
@@ -60,7 +58,7 @@ public class MainViewController extends Controller<MainView> implements PresetCo
                 setActionLogTextFieldTextColor(Color.RED);
                 updateActionLogTextField(LANGUAGE_MANAGER.getString("integerRequiredForm"));
                 view.pack();
-                Timer timer = new Timer(SECOND * 2, actionEvent -> {
+                Timer timer = new Timer(MILLISECOND * 2050, actionEvent -> {
                     bringActionLogToDefault();
                     view.pack();
                 });
@@ -73,8 +71,8 @@ public class MainViewController extends Controller<MainView> implements PresetCo
     }
 
     private void runWithValuesForPresetByTargetType() {
-        int cycleTime;
         int cyclesAmount;
+        double cycleTime; //here set to double, only because TDB server takes 15 seconds for a cycle. It is safe because can be expressed as 0.25 thus equal to 1/4 of a minute = 15 sec.
         String[] presetValuesArray = PresetHandler.getPresetValues(getSelectedPreset());
         String targetType = getChosenTarget();
 
@@ -85,14 +83,14 @@ public class MainViewController extends Controller<MainView> implements PresetCo
                 crackTheCodelock(cyclesAmount, cycleTime);
             } else if (targetType.equalsIgnoreCase("storage")) {
                 cyclesAmount = Integer.parseInt(presetValuesArray[STORAGE_CYCLES_AMOUNT]);
-                cycleTime = Integer.parseInt(presetValuesArray[STORAGE_CYCLE_TIME]);
+                cycleTime = Double.parseDouble(presetValuesArray[STORAGE_CYCLE_TIME]);
                 crackTheCodelock(cyclesAmount, cycleTime);
             }
         }
     }
 
-    private void crackTheCodelock(int cyclesAmount, int cycleTime) {
-        CrackWorker.crack(cyclesAmount * 60 * cycleTime, this);
+    private void crackTheCodelock(int cyclesAmount, double cycleTime) {
+        CrackWorker.crack((int) (cyclesAmount * 60 * cycleTime), this);
     }
 
     private void handleLanguageButton() {
@@ -112,11 +110,6 @@ public class MainViewController extends Controller<MainView> implements PresetCo
     private void handlePresetsButton() {
         System.out.println("Presets button clicked");
     }
-
-//    private void handlePresetsCombobox() {
-//        String selectedPreset = Objects.requireNonNull(view.getPresetsCombobox().getSelectedItem()).toString();
-//        System.out.println("Selected preset: " + selectedPreset);
-//    }
 
     public void updateProgress(int value) {
         view.getCrackingProgressBar().setValue(value);
