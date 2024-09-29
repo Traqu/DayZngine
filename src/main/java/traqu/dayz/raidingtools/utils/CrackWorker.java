@@ -30,7 +30,7 @@ public abstract class CrackWorker {
         MainView view = controller.getView();
         controller.disableCrackingButton();
 
-        EmergencyBackOff emergencyBackOff = new EmergencyBackOff();
+        new EmergencyBackOffWatcher(MouseInfo.getPointerInfo().getLocation());
 
         SwingWorker<Void, Void> combinedWorker = new SwingWorker<>() {
 
