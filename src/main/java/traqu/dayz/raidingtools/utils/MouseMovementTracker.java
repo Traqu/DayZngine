@@ -16,6 +16,8 @@ public class MouseMovementTracker extends Thread { //TODO callback to cracker cl
     private Point mouseOnStartLocation;
     private ArrayList<EmergencyBackOffWatcher> observers = new ArrayList<>();
 
+    private volatile boolean isThreadRedundant = false;
+
     @SneakyThrows
     public MouseMovementTracker(Point location) {
         mouseOnStartLocation = location;
@@ -25,7 +27,7 @@ public class MouseMovementTracker extends Thread { //TODO callback to cracker cl
     @Override
     public void run() {
         try {
-            while (true) {
+            while (!isThreadRedundant) {
                 trackMouseMovement();
 
                 Point mousePosition = MouseInfo.getPointerInfo().getLocation();
@@ -51,8 +53,13 @@ public class MouseMovementTracker extends Thread { //TODO callback to cracker cl
             if (mouseMoved > MOUSE_MOVE_TRESHOLD) {
                 System.out.println("Mouse has been moved more than " + MOUSE_MOVE_TRESHOLD + " units → [" + mouseMoved + "], and ALT was not being held.");
                 notifyObservers();
+                terminateThread();
             }
         }
+    }
+
+    private void terminateThread() {
+        isThreadRedundant = true;
     }
 
     boolean isKeyPressed(Win32VK key) {
