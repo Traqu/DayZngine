@@ -16,6 +16,7 @@ import static traqu.time.utils.Constants.*;
 public abstract class CrackWorker {
     private static final Robot ROBOT;
     private static final LanguageManager LANGUAGE_MANAGER = LanguageManager.getInstance();
+    private static boolean hasCrackingBeenBroken = false;
 
     static {
         try {
@@ -28,6 +29,8 @@ public abstract class CrackWorker {
     public static void crack(int totalCrackingTime, MainViewController controller) {
         MainView view = controller.getView();
         controller.disableCrackingButton();
+
+        EmergencyBackOff emergencyBackOff = new EmergencyBackOff();
 
         SwingWorker<Void, Void> combinedWorker = new SwingWorker<>() {
 
@@ -61,6 +64,10 @@ public abstract class CrackWorker {
                 final long startTime = TimeCalculator.getStartTime();
 
                 for (int i = 0; i < totalCrackingTime; i++) {
+                    if (hasCrackingBeenBroken) {
+                        hasCrackingBeenBroken = false;
+                        break;
+                    }
                     Thread.sleep(SECOND);
                     int elapsedTime = TimeCalculator.calculateElapsedTime(startTime);
                     final int progress = i + 1;
@@ -103,5 +110,10 @@ public abstract class CrackWorker {
             System.out.println("Currently cracking storage!");
             return TINKERING_ANIMATION_ENTRY_TIME;
         } else return 0;
+    }
+
+    public static void breakCracking() {
+        ROBOT.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        hasCrackingBeenBroken = true;
     }
 }
