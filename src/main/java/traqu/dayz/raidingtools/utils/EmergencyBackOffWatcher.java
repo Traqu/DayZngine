@@ -3,8 +3,8 @@ package traqu.dayz.raidingtools.utils;
 import java.awt.*;
 
 public class EmergencyBackOffWatcher {
-    public EmergencyBackOffWatcher(Point location) {
-        MouseMovementTracker mouseMovementTracker = new MouseMovementTracker(location);
+    public EmergencyBackOffWatcher(Point currentMouseLocation) {
+        MouseMovementTracker mouseMovementTracker = new MouseMovementTracker(currentMouseLocation);
         mouseMovementTracker.addObserver(this);
     }
 
