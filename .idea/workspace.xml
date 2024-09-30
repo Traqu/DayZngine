@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
       <artifact name="DayZngine:jar" />
@@ -9,11 +12,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Initial presets are now read from /resources/presets/data">
+    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Update parameter name">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/constant/PresetConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/constant/PresetConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/EmergencyInterruptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/EmergencyInterruptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/time/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/time/utils/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/MouseMovementTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/MouseMovementTracker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,74 +38,32 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;Traqu&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Traqu/DayZMacro.git&quot;,
-    &quot;accountId&quot;: &quot;c89a9bcf-07f8-4181-84f2-49946e5849f3&quot;
-  }
-}</component>
-  <component name="KubernetesApiPersistence">{}</component>
-  <component name="KubernetesApiProvider">{
-  &quot;isMigrated&quot;: true
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/temurin-17.0.12/lib/src.zip!/java.desktop/java/awt/MouseInfo.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2ivYf3dYwdMrjCX20elRmKGPuie" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Application.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [clean,install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [clean,package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [org.apache.maven.plugins:maven-deploy-plugin:3.1.1:deploy].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [org.apache.maven.plugins:maven-jar-plugin:3.2.0:jar].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [site].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [validate].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.DayZMacro [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RESOURCE_BUNDLE_EXPRESSION_USED&quot;: &quot;&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE&quot;: &quot;right&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;left&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/piotr/IdeaProjects/DayZngine&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;C:/Users/piotr/IdeaProjects/DayZMacro/src/main/java/traqu/mvc/view/MainView.form&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/piotr/Desktop/DayZngine",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="traqu.mvc.controller" />
@@ -203,29 +162,9 @@
       <workItem from="1722812510749" duration="3698000" />
       <workItem from="1722872759725" duration="639000" />
       <workItem from="1722964284138" duration="29000" />
-      <workItem from="1722980393280" duration="3984000" />
-      <workItem from="1723397219410" duration="595000" />
-      <workItem from="1723416319120" duration="1417000" />
-      <workItem from="1723419685777" duration="342000" />
-      <workItem from="1723760874334" duration="132000" />
-      <workItem from="1723871488203" duration="1322000" />
-      <workItem from="1724179127445" duration="610000" />
-      <workItem from="1724321208453" duration="1597000" />
-      <workItem from="1724581904994" duration="158000" />
-      <workItem from="1724853566487" duration="720000" />
-      <workItem from="1724873109940" duration="37000" />
-      <workItem from="1724879617541" duration="319000" />
-      <workItem from="1724880196433" duration="40000" />
-      <workItem from="1724880257345" duration="5200000" />
-      <workItem from="1724887297603" duration="1775000" />
-      <workItem from="1725022802162" duration="1107000" />
-      <workItem from="1725026712784" duration="34000" />
-      <workItem from="1725026808809" duration="792000" />
-      <workItem from="1725608662937" duration="528000" />
-      <workItem from="1725929244068" duration="249000" />
-      <workItem from="1725981205331" duration="57000" />
-      <workItem from="1725984047868" duration="600000" />
-      <workItem from="1726699329421" duration="94000" />
+      <workItem from="1722980393280" duration="3645000" />
+      <workItem from="1727622874139" duration="2466000" />
+      <workItem from="1727628229461" duration="14094000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -331,13 +270,12 @@
       <option name="project" value="LOCAL" />
       <updated>1722460974924</updated>
     </task>
-    <task id="LOCAL-00014" summary="Initial presets are now read from /resources/presets/data">
-      <option name="closed" value="true" />
-      <created>1722986511857</created>
+    <task id="LOCAL-00014" summary="Update parameter name">
+      <created>1727641810046</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1722986511857</updated>
+      <updated>1727641810046</updated>
     </task>
     <option name="localTasksCounter" value="15" />
     <servers />
@@ -373,8 +311,8 @@
     <MESSAGE value="Add handling using times for presets" />
     <MESSAGE value="Update" />
     <MESSAGE value="Change project name" />
-    <MESSAGE value="Initial presets are now read from /resources/presets/data" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial presets are now read from /resources/presets/data" />
+    <MESSAGE value="Update parameter name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update parameter name" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

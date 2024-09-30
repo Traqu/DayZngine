@@ -25,10 +25,10 @@ public abstract class AppDataFilesInitializer {
         File directory = new File(path);
         if (!directory.exists()) {
             if (directory.mkdirs()) {
+                System.out.println(path + " directory created.");
                 if (hide) {
                     hideDirectory(directory);
                 }
-                System.out.println(path + " directory created.");
 //                Desktop.getDesktop().open(new File(SETTINGS_PATH));
                 if (directory.getName().equals("settings")) {
                     AppDataFilesInitializer.initializeDefaultSettings();

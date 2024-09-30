@@ -1,16 +1,15 @@
 package traqu;
 
-import traqu.mvc.view.MainView;
-import traqu.settings.utils.AppDataFilesInitializer;
+import traqu.dayz.raidingtools.utils.EmergencyBackOffWatcher;
 
-import javax.swing.SwingUtilities;
+import java.awt.*;
 
 
 public class Main {
 
     public static void main(String[] args) {
-
-        AppDataFilesInitializer.init();
-        SwingUtilities.invokeLater(MainView::new);
+        new EmergencyBackOffWatcher(MouseInfo.getPointerInfo().getLocation()); //TODO remove after testing has been done
+        //        AppDataFilesInitializer.init();
+//        SwingUtilities.invokeLater(MainView::new);
     }
 }
