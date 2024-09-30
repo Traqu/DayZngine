@@ -9,19 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Change project name">
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/io/utils/presets/DefaultPresetInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/io/utils/presets/PresetsProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/traqu/io/utils/settings/SettingsProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/presets/data" afterDir="false" />
+    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Initial presets are now read from /resources/presets/data">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/io/utils/presets/PresetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/io/utils/presets/PresetHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/LanguageViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/LanguageViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/viewbase/LanguageView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/LanguageView.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/viewbase/LanguageView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/LanguageView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/settings/utils/AppDataFilesInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/settings/utils/AppDataFilesInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/constant/PresetConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/constant/PresetConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/EmergencyInterruptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/EmergencyInterruptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/time/utils/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/time/utils/Constants.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +92,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
@@ -211,7 +203,29 @@
       <workItem from="1722812510749" duration="3698000" />
       <workItem from="1722872759725" duration="639000" />
       <workItem from="1722964284138" duration="29000" />
-      <workItem from="1722980393280" duration="3645000" />
+      <workItem from="1722980393280" duration="3984000" />
+      <workItem from="1723397219410" duration="595000" />
+      <workItem from="1723416319120" duration="1417000" />
+      <workItem from="1723419685777" duration="342000" />
+      <workItem from="1723760874334" duration="132000" />
+      <workItem from="1723871488203" duration="1322000" />
+      <workItem from="1724179127445" duration="610000" />
+      <workItem from="1724321208453" duration="1597000" />
+      <workItem from="1724581904994" duration="158000" />
+      <workItem from="1724853566487" duration="720000" />
+      <workItem from="1724873109940" duration="37000" />
+      <workItem from="1724879617541" duration="319000" />
+      <workItem from="1724880196433" duration="40000" />
+      <workItem from="1724880257345" duration="5200000" />
+      <workItem from="1724887297603" duration="1775000" />
+      <workItem from="1725022802162" duration="1107000" />
+      <workItem from="1725026712784" duration="34000" />
+      <workItem from="1725026808809" duration="792000" />
+      <workItem from="1725608662937" duration="528000" />
+      <workItem from="1725929244068" duration="249000" />
+      <workItem from="1725981205331" duration="57000" />
+      <workItem from="1725984047868" duration="600000" />
+      <workItem from="1726699329421" duration="94000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -317,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722460974924</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Initial presets are now read from /resources/presets/data">
+      <option name="closed" value="true" />
+      <created>1722986511857</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1722986511857</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +373,8 @@
     <MESSAGE value="Add handling using times for presets" />
     <MESSAGE value="Update" />
     <MESSAGE value="Change project name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change project name" />
+    <MESSAGE value="Initial presets are now read from /resources/presets/data" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial presets are now read from /resources/presets/data" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
