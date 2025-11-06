@@ -102,7 +102,7 @@ public abstract class CrackWorker {
     }
 
     private static int handleAnimationByTarget(MainViewController controller) {
-        String targetType = controller.getChosenTarget();
+        String targetType = controller.getChosenTargetType();
         if (targetType.equalsIgnoreCase("gate")) {
             System.out.println("Currently cracking gate!");
             return SAWING_ANIMATION_ENTRY_TIME;

@@ -74,7 +74,7 @@ public class MainViewController extends Controller<MainView> implements PresetCo
         int cyclesAmount;
         double cycleTime; //here set to double, only because TDB server takes 15 seconds for a cycle. It is safe because can be expressed as 0.25 thus equal to 1/4 of a minute = 15 sec.
         String[] presetValuesArray = PresetHandler.getPresetValues(getSelectedPreset());
-        String targetType = getChosenTarget();
+        String targetType = getChosenTargetType();
 
         if (presetValuesArray != null) {
             if (targetType.equalsIgnoreCase("gate")) {
@@ -169,7 +169,7 @@ public class MainViewController extends Controller<MainView> implements PresetCo
         return view.getUseManualValuesCheckBox().isSelected();
     }
 
-    public String getChosenTarget() {
+    public String getChosenTargetType() {
         ButtonGroup targetButtonGroup = view.getTargetButtonGroup();
         ButtonModel selection = targetButtonGroup.getSelection();
 
