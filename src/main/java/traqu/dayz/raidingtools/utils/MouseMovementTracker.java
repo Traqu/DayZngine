@@ -14,7 +14,7 @@ public class MouseMovementTracker extends Thread { //TODO callback to cracker cl
     private int x;
     private int y;
     private Point mouseOnStartLocation;
-    private ArrayList<EmergencyBackOffWatcher> observers = new ArrayList<>();
+    private ArrayList<EmergencyBackoffWatcher> observers = new ArrayList<>();
 
     private volatile boolean isThreadRedundant = false;
 
@@ -72,16 +72,16 @@ public class MouseMovementTracker extends Thread { //TODO callback to cracker cl
         return distance;
     }
 
-    public void addObserver(EmergencyBackOffWatcher observer) {
+    public void addObserver(EmergencyBackoffWatcher observer) {
         observers.add(observer);
     }
 
-    public void removeObserver(EmergencyBackOffWatcher observer) {
+    public void removeObserver(EmergencyBackoffWatcher observer) {
         observers.remove(observer);
     }
 
     public void notifyObservers() {
-        for (EmergencyBackOffWatcher observer : observers) {
+        for (EmergencyBackoffWatcher observer : observers) {
             observer.callWorkerToBackOff();
         }
     }

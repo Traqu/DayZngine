@@ -33,7 +33,7 @@ public abstract class ProcessSupervisor {
             return false;
         }
 
-        System.out.println("Nazwa aktywnego procesu: " + currentProcessName);
+        System.out.println("\nNazwa aktywnego procesu: " + currentProcessName);
 
         return processName.equalsIgnoreCase(currentProcessName);
     }

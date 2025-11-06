@@ -12,9 +12,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Update parameter name">
+    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/CrackWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/CrackWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/EmergencyBackOffWatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/EmergencyBackoffWatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/MouseMovementTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/MouseMovementTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/localization.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/localization.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/presets/data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/presets/data" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,14 +45,29 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Traqu&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Traqu/DayZMacro.git&quot;,
+    &quot;accountId&quot;: &quot;c89a9bcf-07f8-4181-84f2-49946e5849f3&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.jdks/temurin-17.0.12/lib/src.zip!/java.desktop/java/awt/MouseInfo.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2ivYf3dYwdMrjCX20elRmKGPuie" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -53,14 +75,23 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Application.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/piotr/Desktop/DayZngine",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/piotr/IdeaProjects/DayZngine",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -110,8 +141,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
       </set>
     </attachedChunks>
   </component>
@@ -165,6 +196,34 @@
       <workItem from="1722980393280" duration="3645000" />
       <workItem from="1727622874139" duration="2466000" />
       <workItem from="1727628229461" duration="14094000" />
+      <workItem from="1728499071266" duration="931000" />
+      <workItem from="1732618404567" duration="4672000" />
+      <workItem from="1732906657288" duration="18000" />
+      <workItem from="1733002692402" duration="58000" />
+      <workItem from="1733007417401" duration="1094000" />
+      <workItem from="1733237299479" duration="3000" />
+      <workItem from="1733248043773" duration="1000" />
+      <workItem from="1733849986557" duration="32000" />
+      <workItem from="1734018702238" duration="306000" />
+      <workItem from="1734107151991" duration="2103000" />
+      <workItem from="1734262174911" duration="21000" />
+      <workItem from="1734608606286" duration="44000" />
+      <workItem from="1734629076220" duration="724000" />
+      <workItem from="1735526375721" duration="8000" />
+      <workItem from="1736704795351" duration="894000" />
+      <workItem from="1736799327803" duration="41000" />
+      <workItem from="1738323898047" duration="20000" />
+      <workItem from="1739486464190" duration="23000" />
+      <workItem from="1739486504757" duration="10000" />
+      <workItem from="1739486548470" duration="33000" />
+      <workItem from="1739486593107" duration="595000" />
+      <workItem from="1739527709944" duration="21000" />
+      <workItem from="1743758757526" duration="63000" />
+      <workItem from="1745079911933" duration="44000" />
+      <workItem from="1745080001026" duration="13000" />
+      <workItem from="1746723147227" duration="10000" />
+      <workItem from="1748632628577" duration="1742000" />
+      <workItem from="1762434739630" duration="1944000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />

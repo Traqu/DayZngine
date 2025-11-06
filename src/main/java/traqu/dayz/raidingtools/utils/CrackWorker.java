@@ -30,7 +30,7 @@ public abstract class CrackWorker {
         MainView view = controller.getView();
         controller.disableCrackingButton();
 
-        new EmergencyBackOffWatcher(MouseInfo.getPointerInfo().getLocation());
+        new EmergencyBackoffWatcher(MouseInfo.getPointerInfo().getLocation());
 
         SwingWorker<Void, Void> combinedWorker = new SwingWorker<>() {
 
@@ -50,9 +50,9 @@ public abstract class CrackWorker {
 
                 if (!ProcessSupervisor.isCurrentWindow(DAYZ)) {
                     System.out.println("You are not focused on DayZ!");
-                    controller.updateActionLogTextField(LANGUAGE_MANAGER.getString("invalidProcess"));
+                    controller.updateActionLogTextField(LANGUAGE_MANAGER.getString("incorrectProcess"));
                     view.pack();
-                    return null;
+                    return null;        //Abort the cracking; commence only when you are focused on the game
                 }
 
                 controller.updateProgressMaximum(totalCrackingTime);
