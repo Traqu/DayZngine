@@ -30,7 +30,7 @@ public abstract class CrackWorker {
         MainView view = controller.getView();
         controller.disableCrackingButton();
 
-        new EmergencyBackoffWatcher(MouseInfo.getPointerInfo().getLocation());
+//        new EmergencyBackoffWatcher(MouseInfo.getPointerInfo().getLocation());
 
         SwingWorker<Void, Void> combinedWorker = new SwingWorker<>() {
 
@@ -54,6 +54,9 @@ public abstract class CrackWorker {
                     view.pack();
                     return null;        //Abort the cracking; commence only when you are focused on the game
                 }
+
+                new EmergencyBackoffWatcher(MouseInfo.getPointerInfo().getLocation());
+
 
                 controller.updateProgressMaximum(totalCrackingTime);
                 controller.updateProgress(0);
@@ -113,7 +116,9 @@ public abstract class CrackWorker {
     }
 
     public static void breakCracking() {
-        ROBOT.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        SwingUtilities.invokeLater(() -> {
+            ROBOT.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+        });
         hasCrackingBeenBroken = true;
     }
 }

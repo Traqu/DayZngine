@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class MouseMovementTracker extends Thread { //TODO callback to cracker class to method responsible for cracking process
 
-    private static final int MOUSE_MOVE_TRESHOLD = 250;
+    private static final int MOUSE_MOVE_TRESHOLD = 15;
 
     private int x;
     private int y;
@@ -82,6 +82,7 @@ public class MouseMovementTracker extends Thread { //TODO callback to cracker cl
 
     public void notifyObservers() {
         for (EmergencyBackoffWatcher observer : observers) {
+            System.out.println("NOTIFYING OBSERVER: " + observer);
             observer.callWorkerToBackOff();
         }
     }

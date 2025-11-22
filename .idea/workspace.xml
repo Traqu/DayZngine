@@ -13,10 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/DayZngine_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/DayZngine_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/constant/PresetConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/constant/PresetConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/CrackWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/CrackWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/MouseMovementTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/MouseMovementTracker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +87,8 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.21824104",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -218,7 +220,11 @@
       <workItem from="1745080001026" duration="13000" />
       <workItem from="1746723147227" duration="10000" />
       <workItem from="1748632628577" duration="1742000" />
-      <workItem from="1762434739630" duration="3053000" />
+      <workItem from="1762434739630" duration="5235000" />
+      <workItem from="1762440242847" duration="650000" />
+      <workItem from="1762441532686" duration="721000" />
+      <workItem from="1763637757593" duration="77000" />
+      <workItem from="1763743791998" duration="5698000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -339,7 +345,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762436887686</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update">
+      <option name="closed" value="true" />
+      <created>1762438085124</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1762438085124</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

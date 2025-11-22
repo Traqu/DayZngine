@@ -3,9 +3,10 @@
     <output-path>$PROJECT_DIR$/out/artifacts/DayZngine_jar</output-path>
     <root id="archive" name="DayZngine.jar">
       <element id="module-output" name="DayZngine" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.10.0/jna-5.10.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/jgoodies/forms/1.2.1/forms-1.2.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna-platform/5.10.0/jna-platform-5.10.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.40/lombok-1.18.40.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/jgoodies/forms/1.2.1/forms-1.2.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/net/java/dev/jna/jna/5.10.0/jna-5.10.0.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
