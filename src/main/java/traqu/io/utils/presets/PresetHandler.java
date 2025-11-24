@@ -23,6 +23,20 @@ public abstract class PresetHandler {
         }
     }
 
+    public static String[] getPresetKeys() {
+        Properties properties = new Properties();
+        try (FileInputStream input = new FileInputStream(PRESETS_FILE_PATH)) {
+            properties.load(input);
+            return properties.keySet()
+                    .stream()
+                    .map(Object::toString)
+                    .toArray(String[]::new);
+        } catch (IOException e) {
+            System.err.println("Failed to load presets: " + e.getMessage());
+            return new String[0];
+        }
+    }
+
     public static void savePreset(String key, String value) {
         Properties properties = new Properties();
         try (FileInputStream input = new FileInputStream(PRESETS_FILE_PATH)) {

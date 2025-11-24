@@ -1,6 +1,7 @@
 package traqu.mvc.view;
 
 import lombok.Getter;
+import traqu.io.utils.presets.PresetHandler;
 import traqu.mvc.controller.MainViewController;
 import traqu.mvc.view.viewbase.View;
 
@@ -36,6 +37,15 @@ public class MainView extends View {
         targetButtonGroup = new ButtonGroup();
         targetButtonGroup.add(gateRadioButton);
         targetButtonGroup.add(storageRadioButton);
+
+        fillPresetComboboxWithKeys();
+    }
+
+    private void fillPresetComboboxWithKeys() {
+        for (String name : PresetHandler.getPresetKeys()) {
+            presetsCombobox.addItem(name);
+        }
+        pack();
     }
 
     @Override

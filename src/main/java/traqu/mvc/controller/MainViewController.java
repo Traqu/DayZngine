@@ -72,7 +72,7 @@ public class MainViewController extends Controller<MainView> implements PresetCo
 
     private void runWithValuesForPresetByTargetType() {
         int cyclesAmount;
-        double cycleTime; //here set to double, only because TDB server takes 15 seconds for a cycle. It is safe because can be expressed as 0.25 thus equal to 1/4 of a minute = 15 sec.
+        double cycleTime; //TODO here set to double, only because TDB server takes 15 seconds for a cycle. It is safe because can be expressed as 0.25 thus equal to 1/4 of a minute = 15 sec.
         String[] presetValuesArray = PresetHandler.getPresetValues(getSelectedPreset());
         String targetType = getChosenTargetType();
 

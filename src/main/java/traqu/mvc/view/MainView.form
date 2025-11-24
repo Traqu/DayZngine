@@ -2,7 +2,7 @@
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="traqu.mvc.view.MainView">
   <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
     <constraints>
-      <xy x="20" y="20" width="915" height="400"/>
+      <xy x="20" y="20" width="965" height="400"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -158,10 +158,7 @@
               <forms/>
             </constraints>
             <properties>
-              <model>
-                <item value="Basically Vanilla"/>
-                <item value="The Day Before"/>
-              </model>
+              <model/>
               <toolTipText resource-bundle="localization" key="settings"/>
             </properties>
           </component>
@@ -211,15 +208,6 @@
               <enabled value="false"/>
             </properties>
           </component>
-          <component id="b81de" class="javax.swing.JCheckBox" binding="useManualValuesCheckBox">
-            <constraints>
-              <grid row="4" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-              <forms/>
-            </constraints>
-            <properties>
-              <text resource-bundle="localization" key="useManualValuesCheckBox"/>
-            </properties>
-          </component>
           <component id="a07a1" class="javax.swing.JTextField" binding="cyclesAmountInput">
             <constraints>
               <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -229,6 +217,15 @@
             </constraints>
             <properties>
               <enabled value="false"/>
+            </properties>
+          </component>
+          <component id="b81de" class="javax.swing.JCheckBox" binding="useManualValuesCheckBox">
+            <constraints>
+              <grid row="4" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <forms/>
+            </constraints>
+            <properties>
+              <text resource-bundle="localization" key="useManualValuesCheckBox"/>
             </properties>
           </component>
         </children>

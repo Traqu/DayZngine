@@ -116,9 +116,7 @@ public abstract class CrackWorker {
     }
 
     public static void breakCracking() {
-        SwingUtilities.invokeLater(() -> {
-            ROBOT.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-        });
+        SwingUtilities.invokeLater(() -> ROBOT.mouseRelease(InputEvent.BUTTON1_DOWN_MASK));
         hasCrackingBeenBroken = true;
     }
 }

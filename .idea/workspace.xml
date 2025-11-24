@@ -12,12 +12,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/DayZngine_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/DayZngine_jar.xml" afterDir="false" />
+    <list default="true" id="3e7f9502-714a-458f-a09a-6057aeccdf6b" name="Changes" comment="Fix EmergencyBackoffWatcher  causing the cracker to backoff immediately after the work start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/CrackWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/CrackWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/MouseMovementTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/dayz/raidingtools/utils/MouseMovementTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/io/utils/presets/PresetHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/io/utils/presets/PresetHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/controller/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/traqu/mvc/view/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +76,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "506",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
@@ -88,7 +90,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.21824104",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -225,6 +227,9 @@
       <workItem from="1762441532686" duration="721000" />
       <workItem from="1763637757593" duration="77000" />
       <workItem from="1763743791998" duration="5698000" />
+      <workItem from="1763809474710" duration="504000" />
+      <workItem from="1763836507464" duration="304000" />
+      <workItem from="1763939387682" duration="1883000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -353,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762438085124</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Fix EmergencyBackoffWatcher  causing the cracker to backoff immediately after the work start">
+      <option name="closed" value="true" />
+      <created>1763809595266</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1763809595266</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +402,8 @@
     <MESSAGE value="Change project name" />
     <MESSAGE value="Update parameter name" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Fix EmergencyBackoffWatcher  causing the cracker to backoff immediately after the work start" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix EmergencyBackoffWatcher  causing the cracker to backoff immediately after the work start" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
